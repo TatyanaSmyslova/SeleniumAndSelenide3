@@ -16,7 +16,7 @@ public class test {
 
     @BeforeAll
     static void setUpAll(){
-        System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
