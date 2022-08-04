@@ -16,7 +16,6 @@ public class test {
 
     @BeforeAll
     static void setUpAll(){
-        System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
         System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
@@ -34,8 +33,8 @@ public class test {
     @Test
     void test1(){
         driver.get("http://localhost:9999");
-        driver.findElement(By.cssSelector("span[data-test-id=`name`] input")).sendKeys("Смыслова Татьяна");
-        driver.findElement(By.cssSelector("span[data-test-id=`phone`] input")).sendKeys("+79649971830");
+        driver.findElement(By.cssSelector("span[data-test-id='name'] input")).sendKeys("Смыслова Татьяна");
+        driver.findElement(By.cssSelector("span[data-test-id='phone'] input")).sendKeys("+79649971830");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button_view_extra")).click();
         String text = driver.findElement(By.className("paragraph")).getText();
